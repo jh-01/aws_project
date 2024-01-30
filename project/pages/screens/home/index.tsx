@@ -12,7 +12,7 @@ const Home = ({navigation}) => {
   return (
     <View>
       <Text>홈</Text>
-      <Cus_Modal></Cus_Modal>
+      <Mypage></Mypage>
     </View>
   );
 };

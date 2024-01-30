@@ -113,7 +113,6 @@ function BottomTabNavigationApp() {
                     )
                     }}
                 />
-
         </Tab.Navigator>
     </NavigationContainer>
     );

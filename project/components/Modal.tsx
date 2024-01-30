@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Alert, Modal, Pressable, Text, View, StyleSheet } from "react-native";
 import Mypage from "../pages/screens/mypage";
 
-const Cus_Modal = () =>{
+const Cus_Modal = (page) =>{
     const [modalVisible, setModalVisible] = useState(false);
 
     return (
@@ -18,7 +18,7 @@ const Cus_Modal = () =>{
                 <View style={styles.centeredView}>
                 <View style={styles.modalView}>
                     <Text style={styles.modalText}>Hello World!</Text>
-                    <Mypage></Mypage>
+                    <page></page>
                     <Pressable
                     style={[styles.button, styles.buttonClose]}
                     onPress={() => setModalVisible(!modalVisible)}>
@@ -38,46 +38,46 @@ const Cus_Modal = () =>{
 
 const styles = StyleSheet.create({
     centeredView: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginTop: 22,
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 22,
     },
     modalView: {
-      margin: 20,
-      backgroundColor: 'white',
-      borderRadius: 20,
-      padding: 35,
-      alignItems: 'center',
-      shadowColor: '#000',
-      shadowOffset: {
-        width: 0,
-        height: 2,
-      },
-      shadowOpacity: 0.25,
-      shadowRadius: 4,
-      elevation: 5,
+        margin: 20,
+        backgroundColor: 'white',
+        borderRadius: 20,
+        padding: 35,
+        alignItems: 'center',
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5,
     },
     button: {
-      borderRadius: 20,
-      padding: 10,
-      elevation: 2,
+        borderRadius: 20,
+        padding: 10,
+        elevation: 2,
     },
     buttonOpen: {
-      backgroundColor: '#F194FF',
+        backgroundColor: '#0057FF',
     },
     buttonClose: {
-      backgroundColor: '#2196F3',
+        backgroundColor: '#2196F3',
     },
     textStyle: {
-      color: 'white',
-      fontWeight: 'bold',
-      textAlign: 'center',
+        color: 'white',
+        fontWeight: 'bold',
+        textAlign: 'center',
     },
     modalText: {
-      marginBottom: 15,
-      textAlign: 'center',
+        marginBottom: 15,
+        textAlign: 'center',
     },
-  });
+});
 
 export default Cus_Modal;
