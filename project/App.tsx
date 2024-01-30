@@ -5,23 +5,24 @@
  * @format
  */
 import React from "react"
-import {StatusBar, StyleSheet, Text, View, Button} from "react-native"
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import {StatusBar, StyleSheet, Text, View, Button, Image, Modal} from "react-native"
+import "react-native-gesture-handler";
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import BottomTabNavigationApp from "./components/BottomTabNavigationApp";
-import "react-native-gesture-handler";
 import { createStackNavigator } from "@react-navigation/stack";
-import Home from "./screens/Home";
-import Closet from "./screens/Closet";
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Navigation} from './pages/navigation';
 
-const Stack = createNativeStackNavigator();
+import BottomTabNavigationApp from "./components/BottomTabNavigationApp";
+import Cus_Modal from "./components/Modal";
+const Stack = createStackNavigator();
 
 export default function App(){
   return (
-    <BottomTabNavigationApp></BottomTabNavigationApp>
+    <>
+      <Image source={require('./assets/Header.png')}/>
+      <BottomTabNavigationApp></BottomTabNavigationApp>
+    </>
+    
   );
 }
 
@@ -34,6 +35,9 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 48,
+  },
+  view:{
+    width:50,
   }
 })
 

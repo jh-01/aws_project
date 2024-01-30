@@ -1,23 +1,22 @@
-import React from 'react';
-import {View, Text, Button, TouchableOpacity, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, Button, TouchableOpacity, StyleSheet, Modal,Pressable} from 'react-native';
+import "react-native-gesture-handler";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import Mypage from '../mypage';
+import Cus_Modal from '../../../components/Modal';
+
+const Stack = createStackNavigator();
 
 const Home = ({navigation}) => {
-
   return (
     <View>
-      <Button title="마이페이지" onPress={() => navigation.navigate('Mypage')} />
       <Text>홈</Text>
+      <Cus_Modal></Cus_Modal>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  button: {
-    alignItems: 'center',
-    backgroundColor: '#DDDDDD',
-    padding: 10,
-  },
-});
+
 
 export default Home;
